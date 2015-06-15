@@ -95,7 +95,6 @@ static bool SplitIndex = false;		// -i
 static bool SplitGC = false;		// -g
 
 static bool SplitWave = false;		// -w
-static unsigned int SplitWaveChannels = 2;	// -w=n
 static bool SplitMono = false;		// -m
 static bool SplitStereo = false;	// -s
 
@@ -340,10 +339,6 @@ int main_process(int argc, char *argv[])
 				if(true) // For future expansion...
 				{
 					SplitWave = true;
-				}
-				if( argv[i][sub]==':' || argv[i][sub]=='=' )
-				{
-					SplitWaveChannels = (unsigned int)strtoul( argv[i]+3, NULL, 0 );
 				}
 			}
 			else if(Opt == 'o') 
